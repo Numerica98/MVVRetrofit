@@ -1,6 +1,7 @@
 package com.petrlr14.mvvm.activities
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             adapter.updateList(it)
         })
         btn_repo.setOnClickListener {
-            viewModel.retrieveRepo(et_repo.text.toString())
+            viewModel.retrieveRepos(et_repo.text.toString())
         }
     }
 
